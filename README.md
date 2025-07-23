@@ -1,7 +1,6 @@
 # DDPM
 A PyTorch-based diffusion model that generates custom emoji-style images using a U-Net architecture with attention and DDPM noise scheduling. Trained on the Subinium emoji dataset.
 
-readme_text = """
 # 🌀 Emoji Diffusion Model
 
 Generate emojis using a U-Net-based diffusion model, trained from scratch on the Subinium EmojiImage dataset.
