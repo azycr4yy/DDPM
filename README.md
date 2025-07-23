@@ -31,3 +31,51 @@ Generate emojis using a U-Net-based diffusion model, trained from scratch on the
 !chmod 600 ~/.kaggle/kaggle.json
 !kaggle datasets download -d subinium/emojiimage-dataset
 !unzip -o emojiimage-dataset.zip -d emoji_dataset
+```
+
+
+## 🚀 Training
+Simply run:
+
+bash
+Copy
+Edit
+python train.py
+This will:
+
+Load and preprocess emoji image data
+
+Train a U-Net model to denoise images
+
+Save and visualize intermediate outputs
+
+## 🖼️ Sampling / Inference
+To generate an emoji from random noise:
+
+python
+Copy
+Edit
+from model import Unet, NoiseScheduler
+from generate import sample_from_diffusion
+
+model = Unet()
+scheduler = NoiseScheduler(1e-4, 0.02, 1000)
+img = sample_from_diffusion(model, scheduler)
+
+
+## 🧪 Requirements
+Install dependencies with:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+nginx
+Copy
+Edit
+torch
+torchvision
+pandas
+matplotlib
+tqdm
+Pillow
